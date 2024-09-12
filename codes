@@ -1,0 +1,74 @@
+
+
+def check_even_odd(numb):
+    if numb % 2 == 0:
+        return "even"
+    else:
+        return "odd"
+
+numb = int(input("Enter a Number: "))
+
+result = check_even_odd(numb)
+print("the number is: ", result)
+
+
+//////////////////////////////////////////////////
+
+def factorial(a):
+    result = 1
+    for i in range (1, a + 1):
+        result *= i
+    return result
+
+number = int(input("enter a number; "))
+print("the factorial for that number is: ", factorial(number))
+
+//////////////////////////////////////////////////
+
+
+
+
+
+def main():
+
+    word = input()
+    print(palindrome(word))
+
+
+def palindrome(word):
+    
+    if word == word[::-1]:
+        return f"{word} is a palindrome"
+    else:
+        return f"{word} is not a palindrome"
+
+main()
+
+
+
+//////////////////////////////////////////////////
+
+
+for num in range(50):
+
+    if num%3 == 0 and num%5 == 0:
+        print("FizzBuss")
+    elif num %3 == 0:
+        print("Fizz")
+    elif num%5 == 0:
+        print("Buzz")
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
