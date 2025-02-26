@@ -1,4 +1,4 @@
-# Simple To-Do List App
+# To Do List App
 # by Lukas, Zak, Edward, Alex
 
 
