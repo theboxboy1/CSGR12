@@ -1,13 +1,10 @@
-# To Do List App
-# by Lukas, Zak, Edward, Alex
-
-
 import tkinter
 import tkinter.messagebox
 import pickle
+from PIL import Image, ImageTk  # Import PIL for better image support
 
 root = tkinter.Tk()
-root.title("To-Do List by @TokyoEdtech")
+root.title("To-Do List by Zakariya, Lukas, Edward, Alex")
 
 def add_task():
     task = entry_task.get()
@@ -64,5 +61,31 @@ button_load_tasks.pack()
 
 button_save_tasks = tkinter.Button(root, text="Save tasks", width=48, command=save_tasks)
 button_save_tasks.pack()
+
+# Add Ad Spot 1 (ad.png)
+try:
+    ad_image = Image.open(r"C:\Users\zyahm\Downloads\ad.png")  # Path to the first image
+    ad_image = ad_image.resize((300, 100))  # Resize for better fit
+    ad_photo = ImageTk.PhotoImage(ad_image)
+
+    ad_label = tkinter.Label(root, image=ad_photo)
+    ad_label.image = ad_photo  # Keep a reference to avoid garbage collection
+    ad_label.pack(pady=10)  # Adds spacing below
+except:
+    ad_label = tkinter.Label(root, text="Ad Space 1", font=("Arial", 14, "bold"), bg="gray", width=40, height=5)
+    ad_label.pack(pady=10)
+
+# Add Ad Spot 2 (boyboy.png)
+try:
+    boyboy_image = Image.open(r"C:\Users\zyahm\Downloads\boyboy.png")  # Path to the second image
+    boyboy_image = boyboy_image.resize((300, 100))  # Resize for better fit
+    boyboy_photo = ImageTk.PhotoImage(boyboy_image)
+
+    boyboy_label = tkinter.Label(root, image=boyboy_photo)
+    boyboy_label.image = boyboy_photo  
+    boyboy_label.pack(pady=10)  # Adds spacing below
+except:
+    boyboy_label = tkinter.Label(root, text="Ad Space 2", font=("Arial", 14, "bold"), bg="gray", width=40, height=5)
+    boyboy_label.pack(pady=10)
 
 root.mainloop()
