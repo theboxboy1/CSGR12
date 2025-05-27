@@ -1,6 +1,6 @@
 import re
 import difflib
-
+#MUST IMPORT ROMEO AND JULIET .txt FILE
 def clean_text(text):
     return re.sub(r"[^a-zA-Z0-9\s]", "", text.lower())
 
