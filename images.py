@@ -5,7 +5,14 @@ from io import BytesIO
 import base64
 
 
+'''
+Prerequisites:
 
+pip install Pillow
+
+pip install -q -U google-genai
+
+'''
 client = genai.Client(api_key="AIzaSyCxLT5bA00Lsf3C_UKcxbeIHuM8SStN2tM")
 
 contents = input("Describe the image you would like to create: ")
